@@ -1,0 +1,191 @@
+::::Command Line Basics::::
+What is the command line? way to interact with a computer 
+How do you open the command line on your computer? ctr+alt+t
+How can you navigate to a particular directory? cd <directoryName>
+Where will cd on its own navigate you to? to the home directory
+Where will cd .. navigate you to? one level above the current directory
+How do you display the name of the directory you are currently in? pwd
+How do you display the contents of the directory you are currently in? ls
+How do you create a new directory? mkdir <directoryName>
+How do you create a new file? touch <fileName>
+How do you destroy a directory or file? rmdir <directoryName>
+How do you rename a directory or file? mv
+#######################################
+::::Introduction to git::::
+Github?
+GitHub is a service that allows you to upload your code using Git and to manage your code with a nice web interface. GitHub and Git are not the same thing or even the same company.
+------------------------
+Steps to setup git:
+git config --global user.name "Your Name"
+git config --global user.email "yourname@example.com"
+To verify things are working properly:
+git config --get user.name
+git config --get user.email
+------------------------
+Steps to create a SSH Key:
+ssh-keygen -C <youremail>
+cat ~/.ssh/id_rsa.pub
+paste the ssh key in github and verify the connection using:
+ssh -T git@github.com
+------------------------
+while git works on your local machine, github is a remote storage facility.
+Git thinks of its data more like a series of snapshots of a miniature filesystem.
+With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot.
+The mechanism that Git uses for this checksumming is called a SHA-1 hash.
+This is a 40-character string composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git. 
+Example: 24b9da6552252987aa493b52f8696cd6d3b00373
+Git has three main states that your files can reside in: modified, staged, and committed:
+Modified means that you have changed the file but have not committed it to your database yet.
+Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+Committed means that the data is safely stored in your local database.
+The basic Git workflow goes something like this:
+1.You modify files in your working tree.
+2.You selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.
+3.You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+------------------------
+What kind of program is Git? git is a distributed version control system DVCS
+What are the differences between Git and a text editor in terms of what they save and their record keeping? A text editor can only make and save changes to a file.
+Git tracks changes to the files and their contents over time.
+Does Git work at a local or remote level? git works at local level
+Does GitHub work at a local or remote level? GitHub works at a remote level
+Why is Git useful for an individual developer? because it helps to experiment, it's much easier to reset
+Why are Git and GitHub useful for a team of developers? because both helps to collaborate
+#######################################
+::::GIT BASICS::::
+initialize a repository from existing code:
+$ git init
+------------------------
+before first commit:
+$ git status
+------------------------
+In staging area we can chose what we can commit.
+------------------------
+Add files to staging area:
+$ git add -A
+or, we can add individual files in staging area
+------------------------
+To revert back from staging area:
+$ git reset
+------------------------
+Commit:
+$ git commit -m "Initial commit"
+------------------------
+Cloning a remote repo:
+$ git clone <url> <where to clone>
+------------------------
+Viewing information about the remote repository:
+$ git remote -v
+------------------------
+List all the branches in the repository:
+$ git branch -a
+------------------------
+List changes:
+$ git diff
+------------------------
+Push:
+1. get all the changes that are made in the remote repository's master brach:
+$ git pull origin master
+2. push to the origin master branch:
+$ git push origin master
+------------------------
+Syntax to create a branch:
+$ git branch <branch name>
+------------------------
+Switch to the created branch:
+$ git checkout <branch name>
+------------------------
+What is the Git command used to get a full copy of an existing Git repository from Github? git clone <remote> <local>
+What is the Git command used to check the status of your files? git status
+What is the Git command used to track files with Git? git add
+What is the Git command used to commit files? git commit -m ""
+What is the Git command used to view your commit history? git log
+What is the Git command used to upload projects onto GitHub? git push
+Explain the two-stage system that Git uses to save files. staging and committing
+Explain what origin is in git push origin master. ->origin is a placeholder name for the URL of the remote repository
+Explain what master is in git push origin master. ->master is the remote branch where you want to push your changes
+------------------------
+A save in Git is divided into two terminal commands: add and commit. The combination of these two commands gives you control of exactly what you want to be remembered in your snapshot.
+Staging: Think of add as adjusting the number of people or elements to be included in a photo. With Git, you can select the changes you want to save with git add. Imagine a project that contains multiple files where changes have been made to several files. You want to save some of the changes you have made and leave some other changes to continue working on them.
+Committing: Think of commit as actually taking a photo, resulting in a snapshot. For example, to commit a file named README.md, type git commit -m "Add README.md". The -m flag stands for "message" and must always be followed by a commit message inside quotation marks. In this example, the commit message was "Add README.md".
+#######################################
+::::::::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
