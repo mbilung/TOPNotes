@@ -257,4 +257,77 @@ Here's an example of a page's layout:
     <!-- page contents -->
   </body>
 </html>
+#######################################
+Cascading Style Sheets (CSS) tell the browser how to display the text and other content that you write in HTML
+There are three ways to apply CSS Styling
+1. Inline styles directly to HTML elements
+2. place CSS rules within style tags in HTML document
+3. write CSS in an external style sheet, then reference that file in the HTML document
 ------------------------
+How will you turn all h2 elements of the same color?
+
+How to create a CSS class?
+<style>
+ .blue-text{
+ color: blue;
+ }
+</style>
+
+In the above example .blue-text is a class, class starts with a period.
+------------------------
+How to call a class in an HTML element?
+<h2 class="blue-text">CatPhotoApp</h2>
+------------------------
+How to set which font an element should use?
+> By using font-family property
+------------------------
+if you wanted an element to use the Helvetica font, but degrade to the sans-serif font when Helvetica isn't available, you will specify it as follows:
+
+p {
+  font-family: Helvetica, sans-serif;
+}
+------------------------
+One cool thing about id attributes is that, like classes, you can style them using CSS.
+
+However, an id is not reusable and should only be applied to one element. An id also has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
+
+You always reference ids by putting a # in front of their names.
+------------------------
+Three important properties control the space that surrounds each HTML element: padding, margin, and border.
+An element's padding controls the amount of space between the element's content and its border.
+When you increase the padding, it will increase the distance (padding) between the text and the border around it.
+
+An element's margin controls the amount of space between an element's border and surrounding elements.
+When you increase the margin, it will increase the distance between its border and surrounding elements.
+------------------------
+Instead of specifying an element's padding-top, padding-right, padding-bottom, and padding-left properties individually, 
+you can specify them all in one line, like this:
+
+padding: 10px 20px 10px 20px;
+------------------------
+Instead of specifying an element's margin-top, margin-right, margin-bottom, and margin-left properties individually,
+ you can specify them all in one line, like this:
+
+margin: 10px 20px 10px 20px;
+------------------------
+[attr=value] attribute selector to style the checkboxes in CatPhotoApp. This selector matches and styles elements with a specific attribute value. For example, the below code changes the margins of all elements with the attribute type and a corresponding value of radio:
+
+[type='radio'] {
+  margin: 20px 0px 20px 0px;
+}
+------------------------
+classes will override the body element's CSS.
+
+Note: It doesn't matter which order the classes are listed in the HTML element.
+
+However, the order of the class declarations in the <style> section is what is important. The second declaration will always take precedence over the first. 
+------------------------
+id declarations override class declarations, regardless of where they are declared in your style element CSS.
+------------------------
+inline styles will override all the CSS declarations in your style element.
+------------------------
+In many situations, you will use CSS libraries. These may accidentally override your own CSS. So when you absolutely need to be sure that an element has specific CSS, you can use !important
+------------------------
+When working with CSS you will likely run into browser compatibility issues at some point. This is why it's important to provide browser fallbacks to avoid potential problems.
+------------------------
+To make use of inheritance, CSS variables are often defined in the :root element.
