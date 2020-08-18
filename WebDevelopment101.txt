@@ -331,3 +331,38 @@ In many situations, you will use CSS libraries. These may accidentally override 
 When working with CSS you will likely run into browser compatibility issues at some point. This is why it's important to provide browser fallbacks to avoid potential problems.
 ------------------------
 To make use of inheritance, CSS variables are often defined in the :root element.
+#######################################
+::::APPLIED VISUAL DESIGN::::
+text-align: justify; causes all lines of text except the last line to meet the left and right edges of the line box.
+text-align: right; right-aligns the text
+text-align: left; (the default) left-aligns the text.
+------------------------
+You can specify the width of an element using the width property in CSS. 
+
+img {
+  width: 220px;
+}
+------------------------
+You can specify the height of an element using the height property in CSS, similar to the width property.
+------------------------
+To make text bold, you can use the strong tag. This is often used to draw attention to text and symbolize that it is important. With the strong tag, the browser applies the CSS of font-weight: bold; to the element.
+------------------------
+To underline text, you can use the u tag. 
+------------------------
+To emphasize text, you can use the em tag. This displays text as italicized.
+------------------------
+To strikethrough text, which is when a horizontal line cuts across the characters, you can use the s tag. 
+------------------------
+You can use the hr tag to add a horizontal line across the width of its containing element. 
+------------------------
+When the position of an element is set to relative, it allows you to specify how CSS should move it relative to its current position in the normal flow of the page. It pairs with the CSS offset properties of left or right, and top or bottom. These say how many pixels, percentages, or ems to move the item away from where it is normally positioned. The following example moves the paragraph 10 pixels away from the bottom:
+
+p {
+  position: relative;
+  bottom: 10px;
+}
+------------------------
+
+
+
+
